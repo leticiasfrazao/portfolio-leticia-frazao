@@ -1,0 +1,884 @@
+:root {
+  --font-body: "Manrope", sans-serif;
+  --font-title: "Playfair Display", serif;
+
+  --background: #151515;
+  --text: #fcf8f8;
+  --muted: #81777a;
+  --line: #ead9df;
+
+  --sakura-light: #f8dfe7;
+  --sakura: #e9a9bc;
+  --sakura-strong: #c96f8d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  overflow: hidden;
+
+  background: var(--background);
+  color: var(--text);
+
+  font-family: var(--font-body);
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.story-layout {
+  display: grid;
+
+  grid-template-columns: 45% 55%;
+
+  align-items: start;
+
+  height: 100vh;
+}
+
+/* =========================
+   FOTO
+========================= */
+
+.story-photo {
+  position: sticky;
+
+  top: 0;
+
+  height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-wrapper {
+  width: min(60%, 580px);
+
+  height: 70%;
+
+  aspect-ratio: 3 / 4;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: fill;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.story-content {
+  height: 100vh;
+
+  padding: 0 12% 10vh 0;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+}
+
+.story-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.story-section {
+  height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-content: center;
+
+  position: relative;
+}
+
+.story-section h3 {
+  color: var(--sakura-strong);
+
+  font-weight: 700;
+
+  margin-bottom: 30px;
+}
+
+.story-section > p {
+  max-width: 650px;
+
+  color: var(--sakura-light);
+
+  font-size: 1.05rem;
+
+  line-height: 2;
+}
+
+.typing-text {
+  min-height: 100px;
+}
+
+/* =========================
+   NAVEGAÇÃO DAS SEÇÕES
+========================= */
+
+.section-navigation {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 2rem;
+}
+
+.prev-section {
+  width: 45px;
+  height: 45px;
+
+  margin-bottom: 0;
+
+  border: 1.5px solid var(--muted);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: var(--muted);
+
+  font-size: 1.6rem;
+
+  cursor: pointer;
+}
+
+.back-to-top {
+  padding: 16px 40px;
+  max-width: fit-content;
+  border: 1.5px solid var(--muted);
+  margin-top: 45px;
+  border-radius: 40px;
+
+  background: transparent;
+
+  color: var(--muted);
+
+  font-family: var(--font-body);
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.back-to-top:hover {
+  color: var(--sakura);
+
+  transform: translateY(-3px);
+}
+
+.mobile-top {
+  display: none;
+  width: 100%;
+  padding: 16px;
+  border-radius: 80px;
+
+  background: var(--background);
+  color: var(--muted);
+  font-size: 1rem;
+  cursor: pointer;
+  animation: setaFlutuando 2.5s ease-in-out infinite;
+  border: 1px solid var(--sakura-light) !important;
+}
+
+.next-section {
+  width: 45px;
+  height: 45px;
+
+  margin-top: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: var(--sakura-strong);
+
+  color: var(--background);
+
+  font-size: 1.6rem;
+
+  cursor: pointer;
+
+  animation: setaFlutuando 0.8s ease-in-out infinite;
+
+  transition: background 0.3s ease;
+}
+
+.next-section:hover {
+  background: #ffffff0d;
+}
+
+@keyframes setaFlutuando {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* =========================
+   HOBBIES
+========================= */
+
+.hobbies {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.hobby-card {
+  background: #ffffff0d;
+
+  border-radius: 8px;
+
+  padding: 20px;
+
+  min-height: 150px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.hobby-card:hover {
+  transform: translateY(-5px);
+
+  background: #ffffff12;
+}
+
+.hobby-number {
+  display: block;
+
+  font-size: 44px;
+
+  font-weight: 700;
+
+  color: var(--sakura);
+
+  margin-bottom: 10px;
+}
+
+.hobby-card h4 {
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+.hobby-card p {
+  color: var(--muted);
+
+  font-size: 0.8rem;
+
+  line-height: 1.5;
+}
+
+/* =========================
+   FLIP CARDS
+========================= */
+
+.technologies {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.technology-card {
+  height: 150px;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+.tecnologia {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.technology-card-inner {
+  border-radius: 8px;
+
+  background: #ffffff0d;
+
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  transition: transform 0.7s ease;
+
+  transform-style: preserve-3d;
+}
+
+.technology-card.flipped .technology-card-inner {
+  transform: rotateY(180deg);
+}
+
+.technology-card-front,
+.technology-card-back {
+  position: absolute;
+
+  width: 100%;
+  height: 80%;
+
+  padding: 16px;
+
+  border-top: 1px solid var(--line);
+
+  background: transparent;
+
+  backface-visibility: hidden;
+
+  -webkit-backface-visibility: hidden;
+
+  border-radius: 10px;
+}
+
+.technology-card-front {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.technology-card-front h4,
+.technology-card-back h4 {
+  margin-top: 25px;
+
+  font-family: var(--font-title);
+
+  font-size: 1.8rem;
+
+  font-weight: 500;
+}
+
+.technology-card-front small {
+  margin-top: 15px;
+
+  color: var(--muted);
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.05em;
+}
+
+.technology-card-back {
+  transform: rotateY(180deg);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  border-color: var(--sakura);
+}
+
+.technology-card-back h4 {
+  color: var(--sakura);
+}
+
+.technology-card-back p {
+  margin-top: 15px;
+
+  color: var(--muted);
+
+  font-size: 0.85rem;
+
+  line-height: 1.8;
+}
+
+.technology-card:hover .technology-card-front {
+  border-color: var(--sakura);
+}
+
+/* =========================
+   FERRAMENTAS
+========================= */
+
+.ferramentas {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+
+/* =========================
+   CONTATO
+========================= */
+
+.contact-links {
+  display: flex;
+
+  gap: 25px;
+
+  margin: 40px 0px 40px 0px;
+
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  color: #151515;
+
+  font-weight: bold;
+
+  font-style: italic;
+
+  padding: 10px 40px;
+
+  border-radius: 25px;
+
+  align-items: center;
+
+  text-decoration: none;
+
+  background-color: white;
+
+  box-shadow: -4px 6px 0 var(--sakura-strong);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contact-links a:hover {
+  opacity: 0.7;
+
+  transform: translateY(-3px);
+}
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+.mobile-navigation {
+  display: none;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+  .story-layout {
+    grid-template-columns: 40% 60%;
+  }
+
+  .story-content {
+    padding-right: 8%;
+  }
+
+  .photo-wrapper {
+    width: 75%;
+  }
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  /* =========================
+       LAYOUT
+    ========================== */
+
+  .story-layout {
+    display: block;
+
+    height: auto;
+  }
+
+  /* =========================
+       FOTO
+    ========================== */
+
+  .story-photo {
+    position: relative;
+
+    height: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+  }
+
+  .photo-wrapper {
+    width: 130px;
+
+    height: 170px;
+    border-radius: 0px;
+    aspect-ratio: auto;
+  }
+
+  /* =========================
+       CONTEÚDO
+    ========================== */
+
+  .story-content {
+    min-height: 100vh;
+
+    padding: 0 25px;
+
+    overflow-y: visible;
+
+    text-align: left;
+  }
+
+  /* =========================
+       SEÇÕES
+    ========================== */
+
+  .story-section {
+    height: auto;
+
+    min-height: 100vh;
+
+    padding: 0px;
+
+    align-items: left;
+  }
+
+  .story-section h3 {
+    margin-bottom: 25px;
+  }
+
+  .story-section > p {
+    max-width: 600px;
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+
+    text-align: left;
+  }
+
+  /* =========================
+       DIGITAÇÃO
+    ========================== */
+
+  .typing-text {
+    min-height: 120px;
+  }
+
+  /* =========================
+       HOBBIES
+    ========================== */
+
+  .hobbies {
+    width: 100%;
+
+    display: flex;
+
+    gap: 12px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+
+    padding-bottom: 10px;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+  }
+
+  .hobbies::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hobby-card {
+    flex: 0 0 85%;
+
+    min-height: 120px;
+
+    scroll-snap-align: center;
+  }
+
+  /* =========================
+       TECNOLOGIAS
+    ========================== */
+
+  .technologies {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .technology-card {
+    height: 140px;
+  }
+
+  /* =========================
+       ESCONDER SETAS DAS SEÇÕES
+    ========================== */
+
+  .story-section > .next-section,
+  .story-section > .prev-section,
+  .section-navigation {
+    display: none;
+  }
+
+  /* =========================
+       SETAS MOBILE
+    ========================== */
+  .back-to-top {
+    display: none;
+  }
+  .mobile-navigation {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 25px;
+
+    transform: translateX(-50%);
+
+    z-index: 2000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    pointer-events: none;
+  }
+
+  .mobile-navigation button {
+    pointer-events: auto;
+
+    border: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-family: var(--font-body);
+
+    transition:
+      opacity 0.3s ease,
+      background 0.3s ease;
+  }
+
+  .mobile-prev {
+    width: 45px;
+
+    height: 45px;
+
+    border: 1.5px solid var(--muted);
+
+    border-radius: 50%;
+
+    background: var(--background);
+
+    color: var(--muted);
+
+    font-size: 1.1rem;
+  }
+
+  .mobile-next {
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: var(--sakura-strong);
+
+    color: var(--background);
+
+    font-size: 1.6rem;
+
+    animation: setaFlutuando 2.5s ease-in-out infinite;
+  }
+
+  .mobile-navigation button.hidden {
+    display: none;
+  }
+
+  /* =========================
+       CONTATO
+    ========================== */
+
+  .contact-links {
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 18px;
+  }
+
+  .contact-links a {
+    width: auto;
+
+    min-width: 180px;
+
+    text-align: center;
+  }
+}
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media (max-width: 480px) {
+  /* FOTO */
+
+  .story-photo {
+    padding-top: 0px;
+  }
+
+  .photo-wrapper {
+    width: 100%;
+
+    height: 600px;
+  }
+
+  /* CONTEÚDO */
+
+  .story-content {
+    padding: 0 20px;
+    min-height: 100vh;
+  }
+
+  /* SEÇÕES */
+
+  .story-section {
+    min-height: 100vh;
+
+    padding: 20px;
+  }
+
+  .story-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .story-section > p {
+    font-size: 0.9rem;
+  }
+
+  /* DIGITAÇÃO */
+
+  .typing-text {
+    min-height: 140px;
+  }
+
+  /* HOBBY */
+
+  .hobby-card {
+    padding: 18px;
+  }
+
+  .ferramentas {
+    justify-content: space-between;
+  }
+  /* TECNOLOGIAS */
+
+  .technology-card {
+    height: 200px;
+  }
+
+  .technology-card-front h4,
+  .technology-card-back h4 {
+    font-size: 1.5rem;
+  }
+
+  /* SETAS */
+
+  .mobile-navigation {
+    bottom: 18px;
+  }
+
+  .mobile-prev {
+    width: 45px;
+
+    height: 45px;
+
+    border: 1.5px solid var(--muted);
+
+    border-radius: 50%;
+
+    background: var(--background);
+
+    color: var(--muted);
+
+    font-size: 1.1rem;
+  }
+
+  .mobile-next {
+    width: 42px;
+
+    height: 42px;
+  }
+
+  /* CONTATO */
+
+  .contact-links a {
+    width: 100%;
+  }
+  .back-to-top {
+    display: none;
+  }
+}

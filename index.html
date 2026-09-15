@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Letícia Frazão | Software Developer</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main class="story-layout">
+      <!-- =========================
+           FOTO
+      ========================== -->
+
+      <aside class="story-photo">
+        <div class="photo-wrapper">
+          <img src="eu_portfolio.png" alt="Foto de Letícia Frazão" />
+        </div>
+      </aside>
+
+      <!-- =========================
+           HISTÓRIA
+      ========================== -->
+
+      <div class="story-content">
+        <!-- =========================
+             01 — SOBRE
+        ========================== -->
+
+        <section id="sobre" class="story-section">
+          <h3>Sobre mim</h3>
+
+          <p
+            class="typing-text"
+            data-text="Oi, eu sou a Letícia. Minha trajetória na tecnologia começou pela curiosidade de entender como as coisas funcionam. Entre estudos, projetos e experiências profissionais, fui descobrindo no desenvolvimento de software uma forma de transformar essa curiosidade em soluções reais."
+          ></p>
+
+          <!-- HOBBIES -->
+
+          <div class="hobbies">
+            <div class="hobby-card">
+              <span class="hobby-number"> ♟ </span>
+
+              <h4>Enxadrista</h4>
+
+              <p>
+                Desde pequena sempre gostei de observar o tabuleiro e pensar em
+                tantas possibilidades.
+              </p>
+            </div>
+
+            <div class="hobby-card">
+              <span class="hobby-number"> ♪ </span>
+
+              <h4>Amante da música</h4>
+
+              <p>
+                Violão, Beatles e Bob Dylan fazem parte dos momentos em que
+                gosto de desacelerar
+              </p>
+            </div>
+
+            <div class="hobby-card">
+              <span class="hobby-number"> ∞ </span>
+
+              <h4>Devoradora de livros</h4>
+
+              <p>
+                Minha curiosidade patina por diversos assuntos. Leio para
+                entender o mundo.
+              </p>
+            </div>
+          </div>
+
+          <!-- SETA -->
+
+          <button
+            class="next-section"
+            aria-label="Continuar para a próxima seção"
+            data-target="#experiencia"
+          >
+            ↓
+          </button>
+        </section>
+
+        <!-- =========================
+             02 — EXPERIÊNCIA
+        ========================== -->
+
+        <section id="experiencia" class="story-section">
+          <h3>Experiência</h3>
+
+          <p
+            class="typing-text"
+            data-text="Minha trajetória profissional passou por desenvolvimento, low-code, sustentação de sistemas e projetos de tecnologia. Comecei com Mendix e, ao longo do caminho, fui ampliando minha experiência com SQL, integrações, APIs e desenvolvimento de software."
+          ></p>
+
+          <!-- SETAS -->
+
+          <div class="section-navigation">
+            <button
+              class="next-section"
+              aria-label="Continuar para Tecnologias"
+              data-target="#tecnologias"
+            >
+              ↓
+            </button>
+
+            <button
+              class="prev-section"
+              aria-label="Voltar para Sobre"
+              data-target="#sobre"
+            >
+              ↑
+            </button>
+          </div>
+        </section>
+
+        <!-- =========================
+             03 — TECNOLOGIAS
+        ========================== -->
+
+        <section id="tecnologias" class="story-section">
+          <h3>Tecnologias</h3>
+
+          <p class="technology-intro">
+            Algumas das tecnologias que fazem parte da minha trajetória — do
+            desenvolvimento de interfaces e aplicações à sustentação, dados e
+            integrações.
+          </p>
+
+          <!-- TECNOLOGIAS -->
+
+          <div class="technologies">
+            <!-- FRONT-END -->
+
+            <div
+              class="technology-card"
+              onclick="this.classList.toggle('flipped')"
+            >
+              <div class="technology-card-inner">
+                <div class="technology-card-front">
+                  <h4>Front-end</h4>
+                  <span class="tecnologia">
+                    Construção de interfaces e experiências para aplicações web.
+                  </span>
+                  <small> clique para virar </small>
+                </div>
+
+                <div class="technology-card-back">
+                  <h4>Front-end</h4>
+
+                  <div class="ferramentas">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>React</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BACK-END -->
+
+            <div
+              class="technology-card"
+              onclick="this.classList.toggle('flipped')"
+            >
+              <div class="technology-card-inner">
+                <div class="technology-card-front">
+                  <h4>Back-end</h4>
+                  <span class="tecnologia">
+                    Lógica de aplicações, dados, APIs e integração entre
+                    sistemas.
+                  </span>
+                  <small> clique para virar </small>
+                </div>
+
+                <div class="technology-card-back">
+                  <h4>Back-end</h4>
+
+                  <div class="ferramentas">
+                    <p>Java</p>
+                    <p>SQL</p>
+                    <p>APIs Rest</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- LOW-CODE -->
+
+            <div
+              class="technology-card"
+              onclick="this.classList.toggle('flipped')"
+            >
+              <div class="technology-card-inner">
+                <div class="technology-card-front">
+                  <h4>Low-code</h4>
+                  <span class="tecnologia">
+                    Desenvolvimento de soluções com foco em regras de negócio,
+                    processos e integrações.
+                  </span>
+                  <small> clique para virar </small>
+                </div>
+
+                <div class="technology-card-back">
+                  <h4>Low-code</h4>
+
+                  <div class="ferramentas">
+                    <p>Mendix</p>
+                    <p>Digibee</p>
+                    <p>OutSystems</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FERRAMENTAS -->
+
+            <div
+              class="technology-card"
+              onclick="this.classList.toggle('flipped')"
+            >
+              <div class="technology-card-inner">
+                <div class="technology-card-front">
+                  <h4>Ferramentas</h4>
+                  <span class="tecnologia">
+                    Ferramentas que fazem parte do meu fluxo de desenvolvimento
+                    e colaboração.
+                  </span>
+                  <small> clique para virar </small>
+                </div>
+
+                <div class="technology-card-back">
+                  <h4>Ferramentas</h4>
+
+                  <div class="ferramentas">
+                    <p>Git</p>
+                    <p>GitHub</p>
+                    <p>Figma</p>
+                    <p>Jira</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SETAS -->
+
+          <div class="section-navigation">
+            <button
+              class="next-section"
+              aria-label="Continuar para Contato"
+              data-target="#contato"
+            >
+              ↓
+            </button>
+
+            <button
+              class="prev-section"
+              aria-label="Voltar para Experiência"
+              data-target="#experiencia"
+            >
+              ↑
+            </button>
+          </div>
+        </section>
+
+        <!-- =========================
+             04 — CONTATO
+        ========================== -->
+
+        <section id="contato" class="story-section contact-section">
+          <h3>Vamos conversar?</h3>
+
+          <p>
+            Se quiser conhecer meu trabalho, trocar uma ideia sobre tecnologia
+            ou conversar sobre oportunidades, será um prazer conversar.
+          </p>
+
+          <!-- CONTATOS -->
+
+          <div class="contact-links">
+            <a
+              href="https://github.com/leticiasfrazao"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github"></i>
+
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/let%C3%ADcia-silva-fraz%C3%A3o/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-linkedin"></i>
+
+              LinkedIn
+            </a>
+
+            <a href="mailto:frazaosleticia@gmail.com ">
+              <i class="bi bi-envelope"></i>
+
+              E-mail
+            </a>
+          </div>
+
+          <!-- SETA -->
+
+          <button class="back-to-top" aria-label="Voltar ao topo">
+            Voltar ao topo ↑
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <!-- =========================
+         NAVEGAÇÃO MOBILE
+    ========================== -->
+
+    <div class="mobile-navigation">
+      <button class="mobile-prev" aria-label="Voltar para a seção anterior">
+        ↑
+      </button>
+
+      <button class="mobile-next" aria-label="Continuar para a próxima seção">
+        ↓
+      </button>
+
+      <button class="mobile-top" aria-label="Voltar ao topo">
+        ↑ Voltar ao topo
+      </button>
+    </div>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Impede restauração da posição anterior -->
+
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+
+    <!-- Seu JavaScript -->
+
+    <script src="portfolio.js"></script>
+  </body>
+</html>

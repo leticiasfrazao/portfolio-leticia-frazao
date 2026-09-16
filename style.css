@@ -527,7 +527,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    overflow: auto;
+    overflow: hidden;
   }
 
   /* =========================
@@ -787,14 +787,15 @@ body {
 
 @media (max-width: 480px) {
   /* FOTO */
+  body {
+    overflow: hidden;
+  }
 
   .story-photo {
     padding-top: 0px;
   }
 
   .photo-wrapper {
-    width: auto;
-
     height: 100vh;
   }
 

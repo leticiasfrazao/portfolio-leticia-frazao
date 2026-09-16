@@ -557,7 +557,7 @@ body {
   }
 
   .photo-wrapper {
-    width: 100%;
+    width: 100vh;
     height: 100vh;
     border-radius: 0px;
     aspect-ratio: auto;

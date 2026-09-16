@@ -557,7 +557,7 @@ body {
   }
 
   .photo-wrapper {
-    width: 100vh;
+    width: 130px;
     height: 100vh;
     border-radius: 0px;
     aspect-ratio: auto;
@@ -796,9 +796,9 @@ body {
   }
 
   .photo-wrapper {
-    height: 100vh;
     width: 100vh;
-    object-fit: cover;
+
+    height: 600px;
   }
 
   /* CONTEÚDO */

@@ -64,7 +64,7 @@ body {
 }
 
 .photo-wrapper {
-  width: min(60%, 580px);
+  width: min(55%, 480px);
 
   height: 70%;
 
@@ -558,8 +558,7 @@ body {
 
   .photo-wrapper {
     width: 130px;
-
-    height: 170px;
+    height: 100vh;
     border-radius: 0px;
     aspect-ratio: auto;
   }
@@ -794,7 +793,7 @@ body {
   }
 
   .photo-wrapper {
-    width: 100%;
+    width: 100vh;
 
     height: 600px;
   }

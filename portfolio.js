@@ -9,7 +9,6 @@ const observer = new IntersectionObserver(
 
       const elemento = entry.target;
 
-      // Impede que a animação seja executada novamente
       if (elemento.dataset.typingStarted === "true") {
         return;
       }
@@ -39,7 +38,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.5,
+    threshold: 0.2,
   },
 );
 

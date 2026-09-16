@@ -793,7 +793,7 @@ body {
   }
 
   .photo-wrapper {
-    width: 100vh;
+    width: auto;
 
     height: 100vh;
   }

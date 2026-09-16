@@ -6,19 +6,16 @@
 
     <title>Letícia Frazão | Software Developer</title>
 
-    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -27,35 +24,18 @@
       rel="stylesheet"
     />
 
-    <!-- Seu CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- =========================
-         CONTEÚDO PRINCIPAL
-    ========================== -->
-
     <main class="story-layout">
-      <!-- =========================
-           FOTO
-      ========================== -->
-
       <aside class="story-photo">
         <div class="photo-wrapper">
           <img src="eu_portfolio.png" alt="Foto de Letícia Frazão" />
         </div>
       </aside>
 
-      <!-- =========================
-           HISTÓRIA
-      ========================== -->
-
       <div class="story-content">
-        <!-- =========================
-             01 — SOBRE
-        ========================== -->
-
         <section id="sobre" class="story-section">
           <h3>Sobre mim</h3>
 
@@ -63,8 +43,6 @@
             class="typing-text"
             data-text="Oi, eu sou a Letícia. Minha trajetória na tecnologia começou pela curiosidade de entender como as coisas funcionam. Entre estudos, projetos e experiências profissionais, fui descobrindo no desenvolvimento de software uma forma de transformar essa curiosidade em soluções reais."
           ></p>
-
-          <!-- HOBBIES -->
 
           <div class="hobbies">
             <div class="hobby-card">
@@ -101,8 +79,6 @@
             </div>
           </div>
 
-          <!-- SETA -->
-
           <button
             class="next-section"
             aria-label="Continuar para a próxima seção"
@@ -112,10 +88,6 @@
           </button>
         </section>
 
-        <!-- =========================
-             02 — EXPERIÊNCIA
-        ========================== -->
-
         <section id="experiencia" class="story-section">
           <h3>Experiência</h3>
 
@@ -123,8 +95,6 @@
             class="typing-text"
             data-text="Minha trajetória profissional passou por desenvolvimento, low-code, sustentação de sistemas e projetos de tecnologia. Comecei com Mendix e, ao longo do caminho, fui ampliando minha experiência com SQL, integrações, APIs e desenvolvimento de software."
           ></p>
-
-          <!-- SETAS -->
 
           <div class="section-navigation">
             <button
@@ -144,10 +114,6 @@
             </button>
           </div>
         </section>
-
-        <!-- =========================
-             03 — TECNOLOGIAS
-        ========================== -->
 
         <section id="tecnologias" class="story-section">
           <h3>Tecnologias</h3>
@@ -189,8 +155,6 @@
               </div>
             </div>
 
-            <!-- BACK-END -->
-
             <div
               class="technology-card"
               onclick="this.classList.toggle('flipped')"
@@ -217,8 +181,6 @@
               </div>
             </div>
 
-            <!-- LOW-CODE -->
-
             <div
               class="technology-card"
               onclick="this.classList.toggle('flipped')"
@@ -244,8 +206,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- FERRAMENTAS -->
 
             <div
               class="technology-card"
@@ -275,8 +235,6 @@
             </div>
           </div>
 
-          <!-- SETAS -->
-
           <div class="section-navigation">
             <button
               class="next-section"
@@ -295,10 +253,6 @@
             </button>
           </div>
         </section>
-
-        <!-- =========================
-             04 — CONTATO
-        ========================== -->
 
         <section id="contato" class="story-section contact-section">
           <h3>Vamos conversar?</h3>
@@ -338,18 +292,12 @@
             </a>
           </div>
 
-          <!-- SETA -->
-
           <button class="back-to-top" aria-label="Voltar ao topo">
             Voltar ao topo ↑
           </button>
         </section>
       </div>
     </main>
-
-    <!-- =========================
-         NAVEGAÇÃO MOBILE
-    ========================== -->
 
     <div class="mobile-navigation">
       <button class="mobile-prev" aria-label="Voltar para a seção anterior">
@@ -365,17 +313,11 @@
       </button>
     </div>
 
-    <!-- Bootstrap JS -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Impede restauração da posição anterior -->
 
     <script>
       history.scrollRestoration = "manual";
     </script>
-
-    <!-- Seu JavaScript -->
 
     <script src="portfolio.js"></script>
   </body>

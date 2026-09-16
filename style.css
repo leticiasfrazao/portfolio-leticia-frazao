@@ -336,11 +336,13 @@ body {
 
   cursor: pointer;
 }
+
 .tecnologia {
   color: var(--muted);
   font-size: 0.8rem;
   line-height: 1.5;
 }
+
 .technology-card-inner {
   border-radius: 8px;
 
@@ -680,6 +682,7 @@ body {
   .back-to-top {
     display: none;
   }
+
   .mobile-navigation {
     position: fixed;
 
@@ -834,6 +837,7 @@ body {
   .ferramentas {
     justify-content: space-between;
   }
+
   /* TECNOLOGIAS */
 
   .technology-card {
@@ -878,6 +882,7 @@ body {
   .contact-links a {
     width: 100%;
   }
+
   .back-to-top {
     display: none;
   }

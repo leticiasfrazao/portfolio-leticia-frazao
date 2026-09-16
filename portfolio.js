@@ -1,7 +1,3 @@
-/* =========================
-   DIGITAÇÃO
-========================= */
-
 const textos = document.querySelectorAll(".typing-text");
 
 const observer = new IntersectionObserver(
@@ -51,18 +47,10 @@ textos.forEach((texto) => {
   observer.observe(texto);
 });
 
-/* =========================
-   NAVEGAÇÃO ENTRE SEÇÕES
-========================= */
-
 const secoes = document.querySelectorAll(".story-section");
 
 const botoesProxima = document.querySelectorAll(".next-section");
 const botoesAnterior = document.querySelectorAll(".prev-section");
-
-/* =========================
-   NAVEGAÇÃO DESKTOP
-========================= */
 
 botoesProxima.forEach((botao) => {
   botao.addEventListener("click", () => {
@@ -97,10 +85,6 @@ botoesAnterior.forEach((botao) => {
     }
   });
 });
-
-/* =========================
-   NAVEGAÇÃO MOBILE
-========================= */
 
 const mobilePrev = document.querySelector(".mobile-prev");
 
@@ -151,14 +135,7 @@ function secaoAtualMobile() {
   return indiceAtual;
 }
 
-/* Atualiza as setas */
-
 function atualizarSetasMobile() {
-  /*
-   * Se estiver na tela inicial,
-   * estamos antes da primeira seção.
-   */
-
   if (window.scrollY < 100) {
     // Não existe botão para voltar
     mobilePrev.classList.add("hidden");
@@ -171,15 +148,11 @@ function atualizarSetasMobile() {
 
   const indiceAtual = secaoAtualMobile();
 
-  // Primeira seção: somente ↓
-
   if (indiceAtual === 0) {
     mobilePrev.classList.remove("hidden");
   } else {
     mobilePrev.classList.remove("hidden");
   }
-
-  // Última seção: somente ↑
 
   if (indiceAtual === secoes.length - 1) {
     mobileNext.classList.add("hidden");
@@ -188,17 +161,8 @@ function atualizarSetasMobile() {
   }
 }
 
-/* =========================
-   BOTÃO VOLTAR MOBILE
-========================= */
-
 mobilePrev.addEventListener("click", () => {
   const indiceAtual = secaoAtualMobile();
-
-  /*
-   * Se estiver em "Sobre mim",
-   * volta para a capa/foto.
-   */
 
   if (indiceAtual === 0 && window.scrollY > 100) {
     window.scrollTo({
@@ -219,16 +183,7 @@ mobilePrev.addEventListener("click", () => {
   }
 });
 
-/* =========================
-   BOTÃO AVANÇAR MOBILE
-========================= */
-
 mobileNext.addEventListener("click", () => {
-  /*
-   * Se estiver na capa/foto,
-   * vai primeiro para "Sobre mim".
-   */
-
   if (window.scrollY < 100) {
     const sobre = document.querySelector("#sobre");
 
@@ -242,11 +197,6 @@ mobileNext.addEventListener("click", () => {
     return;
   }
 
-  /*
-   * Depois da capa,
-   * a navegação segue normalmente.
-   */
-
   const indiceAtual = secaoAtualMobile();
 
   const proximaSecao = secoes[indiceAtual + 1];
@@ -259,10 +209,6 @@ mobileNext.addEventListener("click", () => {
   }
 });
 
-/* =========================
-   ATUALIZAÇÃO DAS SETAS
-========================= */
-
 window.addEventListener("scroll", atualizarSetasMobile);
 
 window.addEventListener("resize", atualizarSetasMobile);
@@ -270,16 +216,12 @@ window.addEventListener("resize", atualizarSetasMobile);
 /* Estado inicial */
 
 atualizarSetasMobile();
-/* =========================
-   VOLTAR AO TOPO
-========================= */
 
 const backToTop = document.querySelector(".back-to-top");
 
 const storyContent = document.querySelector(".story-content");
 
 backToTop.addEventListener("click", () => {
-  // MOBILE
   if (window.innerWidth <= 768) {
     window.scrollTo({
       top: 0,
@@ -289,7 +231,6 @@ backToTop.addEventListener("click", () => {
     return;
   }
 
-  // DESKTOP
   storyContent.scrollTo({
     top: 0,
     behavior: "smooth",

@@ -797,6 +797,8 @@ body {
 
   .photo-wrapper {
     height: 100vh;
+
+    object-fit: cover;
   }
 
   /* CONTEÚDO */

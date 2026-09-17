@@ -28,7 +28,7 @@ const observer = new IntersectionObserver(
 
           index++;
 
-          setTimeout(digitar, 45);
+          setTimeout(digitar, 10);
         }
 
         // Quando termina, o texto permanece na tela
@@ -106,7 +106,7 @@ const observerContato = new IntersectionObserver(
     }
   },
   {
-    threshold: 0.1,
+    threshold: 0.5,
   },
 );
 
